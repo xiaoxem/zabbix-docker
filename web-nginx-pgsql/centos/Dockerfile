@@ -104,4 +104,7 @@ COPY ["conf/etc/php-fpm.conf", "/etc/php-fpm.conf"]
 COPY ["conf/etc/php.d/99-zabbix.ini", "/etc/php.d/99-zabbix.ini"]
 COPY ["docker-entrypoint.sh", "/usr/bin/"]
 
+# update chinese fonts ttf
+COPY ["simhei.ttf", "/usr/share/zabbix/assets/fonts/DejaVuSans.ttf"]
+
 ENTRYPOINT ["docker-entrypoint.sh"]
